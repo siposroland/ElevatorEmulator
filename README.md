@@ -22,8 +22,7 @@ Implements a microcoded state machine with programmable logic and condition sele
 ## Documentation
 
 Fully generated Doxygen based documentation available here:
-[HTML documentation](\docs\html\index.html)
-
+[HTML documentation](https://github.com/siposroland/ElevatorEmulator/blob/main/docs/html/index.html)
 
 You can regenerate the documentation with the following command
 ```bash
