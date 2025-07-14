@@ -1,0 +1,12 @@
+PROJECT_NAME           = "ElevatorEmulator"
+PROJECT_BRIEF          = "A deterministic elevator control emulator with test cases"
+OUTPUT_DIRECTORY       = docs
+RECURSIVE              = YES
+FILE_PATTERNS          = *.c *.h
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+EXTRACT_PRIVATE        = YES
+GENERATE_LATEX         = NO
+INPUT                  = ./src ./inc ./test mainpage.dox
+USE_MDFILE_AS_MAINPAGE = mainpage.dox
+MARKDOWN_SUPPORT       = YES

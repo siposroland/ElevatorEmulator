@@ -1,0 +1,46 @@
+/**
+ * @mainpage About the project
+ * 
+ * @section intro_sec Introduction
+ * 
+ * This project implements a state-machine based elevator controller,
+ * emulated entirely in software. It provides:
+ * 
+ * - Deterministic sequence logic
+ * - Safety condition enforcement
+ * - A programmable instruction memory
+ * - Complete test suite with various scenarios
+ * 
+ * @section usage_sec Build & Run
+ * 
+ * ```bash
+ * mkdir build
+ * cd build
+ * cmake ..
+ * make
+ * ./lift_emulator
+ * ```
+ * 
+ * @section test_sec Testing
+ * 
+ * The system includes:
+ * - Unit tests for the condition selector (CondSel)
+ * - Unit tests for the sequence network logic (SeqNet)
+ * - Scenario-based lift behavior validation
+ * 
+ * @section structure_sec Project Structure
+ * 
+ * - `src/` – core logic (e.g., seqnet.c, condsel.c, main.c)
+ * - `inc/` – headers
+ * - `test/` – unit and integration tests
+ * 
+ * @section note_sec Notes
+ * 
+ * - The lift will never move below floor 0.
+ * - The door never opens during movement.
+ * - Program memory instructions control behavior and transitions.
+ * 
+ * @see src/main.c
+ * @see test/lift_test_cases.c
+ * 
+ */
