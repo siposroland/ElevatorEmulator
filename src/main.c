@@ -4,9 +4,11 @@
  */
 
 #include <stdio.h>
+#include <stdint.h>
 #include "version.h"
 #include "test_assertion.h"
 #include "test_condsel.h"
+#include "test_seqnet.h"
 
 #define ENABLE_ASSERT 1  // <-- Toggle this to 0 to disable
 
@@ -28,6 +30,7 @@ int main(void)
     // Test_lift_assert();  // Run simple assertion test
 
     Test_condsel_all_cases();  // Run all condition selector tests
+    Test_seqnet_all_cases();   // Run SeqNet tests
 
     return 0;
 }
