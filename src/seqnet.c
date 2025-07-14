@@ -78,7 +78,6 @@ void SeqNet_set_pc(uint8_t value)
 void SeqNet_init(void)
 {
     SeqNet_PC = 0;
-    memset(SeqNet_ProgMem, 0, sizeof(SeqNet_ProgMem));
 }
 
 /**
