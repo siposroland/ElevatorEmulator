@@ -36,6 +36,14 @@ typedef enum InstructionBitMasks {
 } InstructionBitMasks_t;
 
 /**
+ * @brief Boolean flags for door request
+ */
+typedef enum DoorRequest {
+    DOOR_REQ_CLOSE   = 0,        ///< Need to close the door
+    DOOR_REQ_OPEN    = 1         ///< Need to open the door
+} DoorRequest_t;
+
+/**
  * @brief Returns a pointer to the internal program memory array.
  * @return Pointer to ProgMem (256-element array of uint16_t).
  */
