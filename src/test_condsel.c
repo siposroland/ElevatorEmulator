@@ -88,7 +88,7 @@ void Test_condsel_all_cases(void)
             .expected = true
         },
         {
-            .name = "Only below pending, index=0 (any pending)",
+            .name = "Only below pending, index=0 (any pend)",
             .inputs = { true, false, false, false, false },
             .index = 0,
             .invert = false,
@@ -103,7 +103,7 @@ void Test_condsel_all_cases(void)
     {
         CondSel_TestCase t = tests[i];
         bool result = CondSel_calc(t.invert, t.index, t.inputs);
-        printf("  - %-50s ... ", t.name);
+        printf("  - %-40s ... ", t.name);
         if (result == t.expected) 
         {
             printf("OK\n");
