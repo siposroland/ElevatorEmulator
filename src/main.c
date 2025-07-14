@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include "version.h"
 #include "test_assert.h"
+#include "test_condsel.h"
 
 #define ENABLE_ASSERT 1  // <-- Toggle this to 0 to disable
 
@@ -26,7 +27,7 @@ int main(void)
 
     // Test_lift_assert();  // Run simple assertion test
 
-    // Test assertion
+    Test_condsel_all_cases();  // Run all condition selector tests
 
     return 0;
 }
