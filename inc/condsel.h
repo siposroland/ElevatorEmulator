@@ -28,6 +28,7 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 
+
 /** Input values of the condition selector. */
 typedef struct {
 	bool call_pending_below;  /* There is an active call below the elevator current level */

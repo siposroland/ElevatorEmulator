@@ -17,7 +17,7 @@ extern "C" {
 /**
  * @brief Bit positions for decoding a 16-bit instruction.
  */
-enum InstructionBitPositions {
+typedef enum InstructionBitPositions {
     BIT_MOVE_UP       = 8,   ///< Request to move the elevator upward
     BIT_MOVE_DOWN     = 9,   ///< Request to move the elevator downward
     BIT_DOOR_STATE    = 10,  ///< Target door state (1 = open, 0 = close)
@@ -25,15 +25,16 @@ enum InstructionBitPositions {
     BIT_COND_SEL      = 12,  ///< Condition selector (2 bits: 12–13)
     BIT_COND_INV      = 14,  ///< Invert condition
     BIT_JUMP_ADDR     = 0    ///< Jump address (bits 0–7)
-};
+} InstructionBitPositions_t;
 
 /**
  * @brief Bit masks for extracting instruction fields.
  */
-enum InstructionBitMasks {
+typedef enum InstructionBitMasks {
     MASK_COND_SEL     = 0x3,     ///< 2-bit mask for condition selector
     MASK_JUMP_ADDR    = 0xFF     ///< 8-bit mask for jump address
-};
+} InstructionBitMasks_t;
+
 /**
  * @brief Returns a pointer to the internal program memory array.
  * @return Pointer to ProgMem (256-element array of uint16_t).
