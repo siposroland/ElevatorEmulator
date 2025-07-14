@@ -6,7 +6,7 @@
 #include "version.h"
 
 /** Project version manually set */
-static const char* PROJECT_VERSION = "v0.0.1";
+static const char* PROJECT_VERSION = "v0.0.2";
 
 /** Git commit hash automatically injected at build time */
 #ifndef GIT_COMMIT_HASH

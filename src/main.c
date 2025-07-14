@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include "version.h"
-#include "test_assert.h"
+#include "test_assertion.h"
 #include "test_condsel.h"
 
 #define ENABLE_ASSERT 1  // <-- Toggle this to 0 to disable
