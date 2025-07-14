@@ -11,7 +11,7 @@ BIN = build/lift_emulator.exe
 all: $(BIN) post-clean
 
 $(BIN): $(OBJ)
-	mkdir build 2>nul || true
+	if not exist build mkdir build
 	$(CC) $(CFLAGS) $^ -o $@
 
 post-clean:
