@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include "version.h"
+#include "test_assert.h"
 
 #define ENABLE_ASSERT 1  // <-- Toggle this to 0 to disable
 
@@ -23,14 +24,10 @@ int main(void)
     printf("Version: %s\n", Version_get());
     printf("Git hash: %s\n", Version_git_hash());
 
-    // Example assertion to demonstrate the assert mechanism
-    int x = 5;
+    // Test_lift_assert();  // Run simple assertion test
 
     // Test assertion
-    LIFT_ASSERT(x == 5);   // ✅ will pass
-    LIFT_ASSERT(x == 10);  // ❌ will fail if ENABLE_ASSERT is 1
-
-    printf("... you would never reach it :)\n");
 
     return 0;
 }
+
