@@ -23,7 +23,7 @@ typedef enum InstructionBitPositions {
     BIT_DOOR_STATE    = 10,  ///< Target door state (1 = open, 0 = close)
     BIT_REQ_RESET     = 11,  ///< Request to delete pending call
     BIT_COND_SEL      = 12,  ///< Condition selector (2 bits: 12–13)
-    BIT_COND_INV      = 14,  ///< Invert condition
+    BIT_COND_INV      = 15,  ///< Invert condition
     BIT_JUMP_ADDR     = 0    ///< Jump address (bits 0–7)
 } InstructionBitPositions_t;
 
@@ -31,7 +31,7 @@ typedef enum InstructionBitPositions {
  * @brief Bit masks for extracting instruction fields.
  */
 typedef enum InstructionBitMasks {
-    MASK_COND_SEL     = 0x3,     ///< 2-bit mask for condition selector
+    MASK_COND_SEL     = 0x7,     ///< 2-bit mask for condition selector
     MASK_JUMP_ADDR    = 0xFF     ///< 8-bit mask for jump address
 } InstructionBitMasks_t;
 
