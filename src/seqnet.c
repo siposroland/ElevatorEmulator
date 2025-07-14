@@ -98,16 +98,7 @@ SeqNet_Out SeqNet_loop(const bool condition_active)
     uint16_t instr = SeqNet_ProgMem[SeqNet_PC];
 
     // Decode instruction into output structure
-    SeqNet_Out out = 
-    {
-        .cond_inv       = ((instr >> BIT_COND_INV)   & 0x1),
-        .cond_sel       = ((instr >> BIT_COND_SEL)   & MASK_COND_SEL),
-        .req_reset      = ((instr >> BIT_REQ_RESET)  & 0x1),
-        .req_door_state = ((instr >> BIT_DOOR_STATE) & 0x1),
-        .req_move_down  = ((instr >> BIT_MOVE_DOWN)  & 0x1),
-        .req_move_up    = ((instr >> BIT_MOVE_UP)    & 0x1),
-        .jump_addr      = ((instr >> BIT_JUMP_ADDR)  & MASK_JUMP_ADDR)
-    };
+    SeqNet_Out out = SeqNet_convert_instruction(instr);
 
     // Update PC based on condition
     if (condition_active) 
@@ -123,4 +114,49 @@ SeqNet_Out SeqNet_loop(const bool condition_active)
     }
 
     return out;
+}
+
+/**
+ * @brief Convert a 16-bit instruction to SeqNet_Out structure.
+ * 
+ * @param instr 16-bit instruction
+ * @return Converted instruction structure
+ */
+SeqNet_Out SeqNet_convert_instruction(uint16_t instruction)
+{
+    SeqNet_Out out = 
+    {
+        .cond_inv       = (instruction >> BIT_COND_INV)   & 0x1,
+        .cond_sel       = (instruction >> BIT_COND_SEL)   & MASK_COND_SEL,
+        .req_reset      = (instruction >> BIT_REQ_RESET)  & 0x1,
+        .req_door_state = (instruction >> BIT_DOOR_STATE) & 0x1,
+        .req_move_down  = (instruction >> BIT_MOVE_DOWN)  & 0x1,
+        .req_move_up    = (instruction >> BIT_MOVE_UP)    & 0x1,
+        .jump_addr      = (instruction >> BIT_JUMP_ADDR)  & MASK_JUMP_ADDR
+    };
+
+    return out;
+}
+
+/**
+ * @brief Convert a SeqNet_Out structure into a 16-bit instruction.
+ *
+ * @param[in] out Pointer to the structure to encode.
+ * @return Converted 16-bit instruction.
+ */
+uint16_t SeqNet_convert_out(const SeqNet_Out* out)
+{
+    LIFT_ASSERT(out != NULL);
+
+    uint16_t instr = 0;
+
+    instr |= ((out->jump_addr     & MASK_JUMP_ADDR)   << BIT_JUMP_ADDR);
+    instr |= ((out->req_move_up   & 0x1)              << BIT_MOVE_UP);
+    instr |= ((out->req_move_down & 0x1)              << BIT_MOVE_DOWN);
+    instr |= ((out->req_door_state & 0x1)             << BIT_DOOR_STATE);
+    instr |= ((out->req_reset     & 0x1)              << BIT_REQ_RESET);
+    instr |= ((out->cond_sel      & MASK_COND_SEL)    << BIT_COND_SEL);
+    instr |= ((out->cond_inv      & 0x1)              << BIT_COND_INV);
+
+    return instr;
 }

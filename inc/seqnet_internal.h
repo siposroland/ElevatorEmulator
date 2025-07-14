@@ -53,6 +53,22 @@ uint8_t SeqNet_get_pc(void);
  */
 void SeqNet_set_pc(uint8_t value);
 
+/**
+ * @brief Convert a 16-bit instruction to SeqNet_Out structure.
+ * 
+ * @param instr 16-bit instruction
+ * @return Converted instruction structure
+ */
+SeqNet_Out SeqNet_convert_instruction(uint16_t instruction);
+
+/**
+ * @brief Convert a SeqNet_Out structure into a 16-bit instruction.
+ *
+ * @param[in] out Pointer to the structure to encode.
+ * @return Converted 16-bit instruction.
+ */
+uint16_t SeqNet_convert_out(const SeqNet_Out* out);
+
 #ifdef __cplusplus
 }
 #endif
