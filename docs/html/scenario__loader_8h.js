@@ -1,5 +1,5 @@
 var scenario__loader_8h =
 [
-    [ "Scenario_load_default_program", "scenario__loader_8h.html#af32c08a08003a5451d1ad38cf674ed52", null ],
-    [ "Scenario_print_program", "scenario__loader_8h.html#ae55c728df950491ec23a72d33f3f228f", null ]
+    [ "ScenarioDefaultProgram_load", "scenario__loader_8h.html#ac6de743dd5018beb13834eb70753d79b", null ],
+    [ "ScenarioProgram_print", "scenario__loader_8h.html#a81dbaf09e79feda017adcd690fe25546", null ]
 ];

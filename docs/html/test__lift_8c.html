@@ -108,14 +108,14 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1d3ea621746702bf8dd2fc554c77b923" id="r_a1d3ea621746702bf8dd2fc554c77b923"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d3ea621746702bf8dd2fc554c77b923">RunLiftTestCase</a> (const <a class="el" href="struct_lift_test_case__t.html">LiftTestCase_t</a> *test, const char *name)</td></tr>
-<tr class="memdesc:a1d3ea621746702bf8dd2fc554c77b923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates a lift test case defined by input-output steps.  <br /></td></tr>
-<tr class="memitem:ad4d79cf55acca86d8466991129c46b25" id="r_ad4d79cf55acca86d8466991129c46b25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4d79cf55acca86d8466991129c46b25">Lift_state_to_array</a> (const <a class="el" href="struct_lift_state__t.html">LiftState_t</a> *state, <a class="el" href="struct_cond_sel___in.html">CondSel_In</a> *out)</td></tr>
-<tr class="memdesc:ad4d79cf55acca86d8466991129c46b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a high-level lift state into condition selector input format.  <br /></td></tr>
-<tr class="memitem:ac66fa0625d18b5e5394c66e59236888c" id="r_ac66fa0625d18b5e5394c66e59236888c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac66fa0625d18b5e5394c66e59236888c">LiftState_equals_verbose</a> (const <a class="el" href="struct_lift_state__t.html">LiftState_t</a> *a, const <a class="el" href="struct_lift_state__t.html">LiftState_t</a> *b)</td></tr>
-<tr class="memdesc:ac66fa0625d18b5e5394c66e59236888c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <a class="el" href="struct_lift_state__t.html" title="A single step in a test scenario for the lift controller.">LiftState_t</a> structures and prints differences if any.  <br /></td></tr>
-<tr class="memitem:a459b49577d5a84e96af85b00aec46184" id="r_a459b49577d5a84e96af85b00aec46184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a459b49577d5a84e96af85b00aec46184">RunAllLiftTestCases</a> (void)</td></tr>
-<tr class="memdesc:a459b49577d5a84e96af85b00aec46184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run all tests in one call.  <br /></td></tr>
+<tr class="memitem:a024b0010b43ecaae2fc3f84e4780ab76" id="r_a024b0010b43ecaae2fc3f84e4780ab76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a024b0010b43ecaae2fc3f84e4780ab76">LiftTestCase_run</a> (const <a class="el" href="struct_lift_test_case__t.html">LiftTestCase_t</a> *test, const char *name)</td></tr>
+<tr class="memdesc:a024b0010b43ecaae2fc3f84e4780ab76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates a lift test case defined by input-output steps.  <br /></td></tr>
+<tr class="memitem:af3cb4d7ae8688718cb61bb567f9ec3cf" id="r_af3cb4d7ae8688718cb61bb567f9ec3cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3cb4d7ae8688718cb61bb567f9ec3cf">LiftStateArray_convert</a> (const <a class="el" href="struct_lift_state__t.html">LiftState_t</a> *state, <a class="el" href="struct_cond_sel___in.html">CondSel_In</a> *out)</td></tr>
+<tr class="memdesc:af3cb4d7ae8688718cb61bb567f9ec3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a high-level lift state into condition selector input format.  <br /></td></tr>
+<tr class="memitem:abb13d17b7007976b8bd49a0d24e47902" id="r_abb13d17b7007976b8bd49a0d24e47902"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb13d17b7007976b8bd49a0d24e47902">LiftState_compare</a> (const <a class="el" href="struct_lift_state__t.html">LiftState_t</a> *a, const <a class="el" href="struct_lift_state__t.html">LiftState_t</a> *b)</td></tr>
+<tr class="memdesc:abb13d17b7007976b8bd49a0d24e47902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <a class="el" href="struct_lift_state__t.html" title="A single step in a test scenario for the lift controller.">LiftState_t</a> structures and prints differences if any.  <br /></td></tr>
+<tr class="memitem:ac665ab8e0849b9ba8af732d93427afff" id="r_ac665ab8e0849b9ba8af732d93427afff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac665ab8e0849b9ba8af732d93427afff">LiftTestAll_run</a> (void)</td></tr>
+<tr class="memdesc:ac665ab8e0849b9ba8af732d93427afff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run all tests in one call.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -148,45 +148,14 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ad4d79cf55acca86d8466991129c46b25" name="ad4d79cf55acca86d8466991129c46b25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4d79cf55acca86d8466991129c46b25">&#9670;&#160;</a></span>Lift_state_to_array()</h2>
+<a id="abb13d17b7007976b8bd49a0d24e47902" name="abb13d17b7007976b8bd49a0d24e47902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb13d17b7007976b8bd49a0d24e47902">&#9670;&#160;</a></span>LiftState_compare()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Lift_state_to_array </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_lift_state__t.html">LiftState_t</a> *</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_cond_sel___in.html">CondSel_In</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts a high-level lift state into condition selector input format. </p>
-<p>This function takes the current elevator state (floor, door, calls) and fills a <a class="el" href="struct_cond_sel___in.html">CondSel_In</a> structure used for evaluating logic conditions.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>Pointer to the current lift state. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Pointer to the output <a class="el" href="struct_cond_sel___in.html">CondSel_In</a> structure to be filled. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac66fa0625d18b5e5394c66e59236888c" name="ac66fa0625d18b5e5394c66e59236888c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac66fa0625d18b5e5394c66e59236888c">&#9670;&#160;</a></span>LiftState_equals_verbose()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool LiftState_equals_verbose </td>
+          <td class="memname">bool LiftState_compare </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_lift_state__t.html">LiftState_t</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
@@ -210,14 +179,46 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a459b49577d5a84e96af85b00aec46184" name="a459b49577d5a84e96af85b00aec46184"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a459b49577d5a84e96af85b00aec46184">&#9670;&#160;</a></span>RunAllLiftTestCases()</h2>
+<a id="af3cb4d7ae8688718cb61bb567f9ec3cf" name="af3cb4d7ae8688718cb61bb567f9ec3cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3cb4d7ae8688718cb61bb567f9ec3cf">&#9670;&#160;</a></span>LiftStateArray_convert()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RunAllLiftTestCases </td>
+          <td class="memname">void LiftStateArray_convert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_lift_state__t.html">LiftState_t</a> *</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_cond_sel___in.html">CondSel_In</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a high-level lift state into condition selector input format. </p>
+<p>Convert <a class="el" href="struct_lift_state__t.html" title="A single step in a test scenario for the lift controller.">LiftState_t</a> to <a class="el" href="struct_cond_sel___in.html">CondSel_In</a> structure.</p>
+<p>This function takes the current elevator state (floor, door, calls) and fills a <a class="el" href="struct_cond_sel___in.html">CondSel_In</a> structure used for evaluating logic conditions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>Pointer to the current lift state. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Pointer to the output <a class="el" href="struct_cond_sel___in.html">CondSel_In</a> structure to be filled. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac665ab8e0849b9ba8af732d93427afff" name="ac665ab8e0849b9ba8af732d93427afff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac665ab8e0849b9ba8af732d93427afff">&#9670;&#160;</a></span>LiftTestAll_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LiftTestAll_run </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -229,14 +230,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1d3ea621746702bf8dd2fc554c77b923" name="a1d3ea621746702bf8dd2fc554c77b923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d3ea621746702bf8dd2fc554c77b923">&#9670;&#160;</a></span>RunLiftTestCase()</h2>
+<a id="a024b0010b43ecaae2fc3f84e4780ab76" name="a024b0010b43ecaae2fc3f84e4780ab76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024b0010b43ecaae2fc3f84e4780ab76">&#9670;&#160;</a></span>LiftTestCase_run()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RunLiftTestCase </td>
+          <td class="memname">void LiftTestCase_run </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_lift_test_case__t.html">LiftTestCase_t</a> *</td>          <td class="paramname"><span class="paramname"><em>test</em></span>, </td>
         </tr>

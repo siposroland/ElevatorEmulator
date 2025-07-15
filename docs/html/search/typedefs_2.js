@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['instructionbitmasks_5ft_0',['InstructionBitMasks_t',['../seqnet__internal_8h.html#a2ac14762663365ab225c3276ebbc9639',1,'seqnet_internal.h']]],
-  ['instructionbitpositions_5ft_1',['InstructionBitPositions_t',['../seqnet__internal_8h.html#ae816f0d2d62ef0ba55990d8340b07cc3',1,'seqnet_internal.h']]]
+  ['instructionbitmasks_5ft_0',['InstructionBitMasks_t',['../seqnet__internal_8h.html#acdc978c50e69d64e46e1838388535042',1,'seqnet_internal.h']]],
+  ['instructionbitpositions_5ft_1',['InstructionBitPositions_t',['../seqnet__internal_8h.html#a4f93a3a91b17570e07767a568196cbdb',1,'seqnet_internal.h']]]
 ];

@@ -1,5 +1,5 @@
 var test__condsel_8c =
 [
-    [ "CondSel_TestCase", "struct_cond_sel___test_case.html", "struct_cond_sel___test_case" ],
-    [ "Test_condsel_all_cases", "test__condsel_8c.html#a9524b44da35f8f96e78b369aa53fd8a0", null ]
+    [ "CondSelTestCase_t", "struct_cond_sel_test_case__t.html", "struct_cond_sel_test_case__t" ],
+    [ "CondSelAllCases_test", "test__condsel_8c.html#a8458d14f680341b931cd6e6b70f6ad46", null ]
 ];

@@ -19,13 +19,10 @@ var searchData=
   ['test_5fcase_5fup_5ftwo_5ffloors_16',['test_case_up_two_floors',['../test__lift_8c.html#a12f16333c84cc17a606f531c1ec474bc',1,'test_case_up_two_floors:&#160;test_lift.c'],['../test__lift_8h.html#a12f16333c84cc17a606f531c1ec474bc',1,'test_case_up_two_floors:&#160;test_lift.c']]],
   ['test_5fcondsel_2ec_17',['test_condsel.c',['../test__condsel_8c.html',1,'']]],
   ['test_5fcondsel_2eh_18',['test_condsel.h',['../test__condsel_8h.html',1,'']]],
-  ['test_5fcondsel_5fall_5fcases_19',['Test_condsel_all_cases',['../test__condsel_8c.html#a9524b44da35f8f96e78b369aa53fd8a0',1,'Test_condsel_all_cases(void):&#160;test_condsel.c'],['../test__condsel_8h.html#a9524b44da35f8f96e78b369aa53fd8a0',1,'Test_condsel_all_cases(void):&#160;test_condsel.c']]],
-  ['test_5flift_2ec_20',['test_lift.c',['../test__lift_8c.html',1,'']]],
-  ['test_5flift_2eh_21',['test_lift.h',['../test__lift_8h.html',1,'']]],
-  ['test_5flift_5fassert_22',['Test_lift_assert',['../test__assertion_8c.html#a29eff6e99298b6372b613148e68d46dc',1,'Test_lift_assert(void):&#160;test_assertion.c'],['../test__assertion_8h.html#a29eff6e99298b6372b613148e68d46dc',1,'Test_lift_assert(void):&#160;test_assertion.c']]],
-  ['test_5fseqnet_2ec_23',['test_seqnet.c',['../test__seqnet_8c.html',1,'']]],
-  ['test_5fseqnet_2eh_24',['test_seqnet.h',['../test__seqnet_8h.html',1,'']]],
-  ['test_5fseqnet_5fall_5fcases_25',['Test_seqnet_all_cases',['../test__seqnet_8c.html#a8fd93e1b0b88193660d95efb7c8f265c',1,'Test_seqnet_all_cases(void):&#160;test_seqnet.c'],['../test__seqnet_8h.html#a8fd93e1b0b88193660d95efb7c8f265c',1,'Test_seqnet_all_cases(void):&#160;test_seqnet.c']]],
-  ['testing_26',['Testing',['../index.html#test_sec',1,'']]],
-  ['the_20project_27',['About the project',['../index.html',1,'']]]
+  ['test_5flift_2ec_19',['test_lift.c',['../test__lift_8c.html',1,'']]],
+  ['test_5flift_2eh_20',['test_lift.h',['../test__lift_8h.html',1,'']]],
+  ['test_5fseqnet_2ec_21',['test_seqnet.c',['../test__seqnet_8c.html',1,'']]],
+  ['test_5fseqnet_2eh_22',['test_seqnet.h',['../test__seqnet_8h.html',1,'']]],
+  ['testing_23',['Testing',['../index.html#test_sec',1,'']]],
+  ['the_20project_24',['About the project',['../index.html',1,'']]]
 ];

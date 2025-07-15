@@ -110,20 +110,20 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab578c7774ce96b64cc10cd01a55c5952" id="r_ab578c7774ce96b64cc10cd01a55c5952"><td class="memItemLeft" align="right" valign="top">uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab578c7774ce96b64cc10cd01a55c5952">SeqNet_get_program_memory</a> (void)</td></tr>
-<tr class="memdesc:ab578c7774ce96b64cc10cd01a55c5952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal program memory array.  <br /></td></tr>
-<tr class="memitem:a3991c12ea738235495ee5a4492c68962" id="r_a3991c12ea738235495ee5a4492c68962"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3991c12ea738235495ee5a4492c68962">SeqNet_get_pc</a> (void)</td></tr>
-<tr class="memdesc:a3991c12ea738235495ee5a4492c68962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current value of the Program Counter.  <br /></td></tr>
-<tr class="memitem:a325e8e832a83f06eb75694538faca8bb" id="r_a325e8e832a83f06eb75694538faca8bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a325e8e832a83f06eb75694538faca8bb">SeqNet_set_pc</a> (uint8_t value)</td></tr>
-<tr class="memdesc:a325e8e832a83f06eb75694538faca8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the Program Counter.  <br /></td></tr>
+<tr class="memitem:a1a98f4a029acc3fda61cc41c3582999b" id="r_a1a98f4a029acc3fda61cc41c3582999b"><td class="memItemLeft" align="right" valign="top">uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a98f4a029acc3fda61cc41c3582999b">SeqNetProgramMemory_get</a> (void)</td></tr>
+<tr class="memdesc:a1a98f4a029acc3fda61cc41c3582999b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the internal program memory array.  <br /></td></tr>
+<tr class="memitem:a53aebd0d393c2b954be7126abb50214e" id="r_a53aebd0d393c2b954be7126abb50214e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53aebd0d393c2b954be7126abb50214e">SeqNetPC_get</a> (void)</td></tr>
+<tr class="memdesc:a53aebd0d393c2b954be7126abb50214e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current value of the Program Counter.  <br /></td></tr>
+<tr class="memitem:a4107bafc4e82a6285f6a5e50e991d3df" id="r_a4107bafc4e82a6285f6a5e50e991d3df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4107bafc4e82a6285f6a5e50e991d3df">SeqNetPC_set</a> (uint8_t value)</td></tr>
+<tr class="memdesc:a4107bafc4e82a6285f6a5e50e991d3df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the Program Counter.  <br /></td></tr>
 <tr class="memitem:aeddf77448b575faa6ca4bf8a937ce9aa" id="r_aeddf77448b575faa6ca4bf8a937ce9aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeddf77448b575faa6ca4bf8a937ce9aa">SeqNet_init</a> (void)</td></tr>
 <tr class="memdesc:aeddf77448b575faa6ca4bf8a937ce9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the sequential network.  <br /></td></tr>
 <tr class="memitem:a226a6e4b05cf3a585b57dd936b5394c8" id="r_a226a6e4b05cf3a585b57dd936b5394c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_seq_net___out.html">SeqNet_Out</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a226a6e4b05cf3a585b57dd936b5394c8">SeqNet_loop</a> (const bool condition_active)</td></tr>
 <tr class="memdesc:a226a6e4b05cf3a585b57dd936b5394c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the current instruction and advances or jumps the PC.  <br /></td></tr>
-<tr class="memitem:a3b4e5db22674c1378ba7a73b0f5930c0" id="r_a3b4e5db22674c1378ba7a73b0f5930c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_seq_net___out.html">SeqNet_Out</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b4e5db22674c1378ba7a73b0f5930c0">SeqNet_convert_instruction</a> (uint16_t instruction)</td></tr>
-<tr class="memdesc:a3b4e5db22674c1378ba7a73b0f5930c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 16-bit instruction to <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> structure.  <br /></td></tr>
-<tr class="memitem:a451f79b49a84fce0a15c120ec2fda285" id="r_a451f79b49a84fce0a15c120ec2fda285"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a451f79b49a84fce0a15c120ec2fda285">SeqNet_convert_out</a> (const <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> *out)</td></tr>
-<tr class="memdesc:a451f79b49a84fce0a15c120ec2fda285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> structure into a 16-bit instruction.  <br /></td></tr>
+<tr class="memitem:ad7fed02926526efb25a5522fa7e48707" id="r_ad7fed02926526efb25a5522fa7e48707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_seq_net___out.html">SeqNet_Out</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7fed02926526efb25a5522fa7e48707">SeqNetInstruction_convert</a> (uint16_t instruction)</td></tr>
+<tr class="memdesc:ad7fed02926526efb25a5522fa7e48707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 16-bit instruction to <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> structure.  <br /></td></tr>
+<tr class="memitem:ad4052f4788dbf022539a86b51e38e36f" id="r_ad4052f4788dbf022539a86b51e38e36f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4052f4788dbf022539a86b51e38e36f">SeqNetOut_convert</a> (const <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> *out)</td></tr>
+<tr class="memdesc:ad4052f4788dbf022539a86b51e38e36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> structure into a 16-bit instruction.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -186,101 +186,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a3b4e5db22674c1378ba7a73b0f5930c0" name="a3b4e5db22674c1378ba7a73b0f5930c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b4e5db22674c1378ba7a73b0f5930c0">&#9670;&#160;</a></span>SeqNet_convert_instruction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> SeqNet_convert_instruction </td>
-          <td>(</td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>instruction</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convert a 16-bit instruction to <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> structure. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">instr</td><td>16-bit instruction </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Converted instruction structure </dd></dl>
-
-</div>
-</div>
-<a id="a451f79b49a84fce0a15c120ec2fda285" name="a451f79b49a84fce0a15c120ec2fda285"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a451f79b49a84fce0a15c120ec2fda285">&#9670;&#160;</a></span>SeqNet_convert_out()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t SeqNet_convert_out </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convert a <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> structure into a 16-bit instruction. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">out</td><td>Pointer to the structure to encode. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Converted 16-bit instruction. </dd></dl>
-
-</div>
-</div>
-<a id="a3991c12ea738235495ee5a4492c68962" name="a3991c12ea738235495ee5a4492c68962"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3991c12ea738235495ee5a4492c68962">&#9670;&#160;</a></span>SeqNet_get_pc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t SeqNet_get_pc </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the current value of the Program Counter. </p>
-<p>Returns the current Program Counter value.</p>
-<p>Used to inspect the internal state during testing.</p>
-<dl class="section return"><dt>Returns</dt><dd>Current value of PC (0–255). </dd></dl>
-
-</div>
-</div>
-<a id="ab578c7774ce96b64cc10cd01a55c5952" name="ab578c7774ce96b64cc10cd01a55c5952"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab578c7774ce96b64cc10cd01a55c5952">&#9670;&#160;</a></span>SeqNet_get_program_memory()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t * SeqNet_get_program_memory </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the internal program memory array. </p>
-<p>This function is intended for testing or emulation purposes only.</p>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the 256-element instruction memory. </dd></dl>
-
-</div>
-</div>
 <a id="aeddf77448b575faa6ca4bf8a937ce9aa" name="aeddf77448b575faa6ca4bf8a937ce9aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeddf77448b575faa6ca4bf8a937ce9aa">&#9670;&#160;</a></span>SeqNet_init()</h2>
 
@@ -328,14 +233,88 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a325e8e832a83f06eb75694538faca8bb" name="a325e8e832a83f06eb75694538faca8bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a325e8e832a83f06eb75694538faca8bb">&#9670;&#160;</a></span>SeqNet_set_pc()</h2>
+<a id="ad7fed02926526efb25a5522fa7e48707" name="ad7fed02926526efb25a5522fa7e48707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7fed02926526efb25a5522fa7e48707">&#9670;&#160;</a></span>SeqNetInstruction_convert()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SeqNet_set_pc </td>
+          <td class="memname"><a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> SeqNetInstruction_convert </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>instruction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a 16-bit instruction to <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> structure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instr</td><td>16-bit instruction </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Converted instruction structure </dd></dl>
+
+</div>
+</div>
+<a id="ad4052f4788dbf022539a86b51e38e36f" name="ad4052f4788dbf022539a86b51e38e36f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4052f4788dbf022539a86b51e38e36f">&#9670;&#160;</a></span>SeqNetOut_convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t SeqNetOut_convert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a <a class="el" href="struct_seq_net___out.html">SeqNet_Out</a> structure into a 16-bit instruction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">out</td><td>Pointer to the structure to encode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Converted 16-bit instruction. </dd></dl>
+
+</div>
+</div>
+<a id="a53aebd0d393c2b954be7126abb50214e" name="a53aebd0d393c2b954be7126abb50214e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53aebd0d393c2b954be7126abb50214e">&#9670;&#160;</a></span>SeqNetPC_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t SeqNetPC_get </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current value of the Program Counter. </p>
+<p>Returns the current Program Counter value.</p>
+<p>Used to inspect the internal state during testing.</p>
+<dl class="section return"><dt>Returns</dt><dd>Current value of PC (0–255). </dd></dl>
+
+</div>
+</div>
+<a id="a4107bafc4e82a6285f6a5e50e991d3df" name="a4107bafc4e82a6285f6a5e50e991d3df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4107bafc4e82a6285f6a5e50e991d3df">&#9670;&#160;</a></span>SeqNetPC_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SeqNetPC_set </td>
           <td>(</td>
           <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -352,6 +331,27 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a1a98f4a029acc3fda61cc41c3582999b" name="a1a98f4a029acc3fda61cc41c3582999b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a98f4a029acc3fda61cc41c3582999b">&#9670;&#160;</a></span>SeqNetProgramMemory_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t * SeqNetProgramMemory_get </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the internal program memory array. </p>
+<p>This function is intended for testing or emulation purposes only.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the 256-element instruction memory. </dd></dl>
 
 </div>
 </div>

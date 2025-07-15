@@ -1,10 +1,10 @@
 var test__lift_8c =
 [
     [ "LIFT_TEST_DEBUG_LOG_ENABLED", "test__lift_8c.html#a8903f51f2fb253a2e3ee82881464ed9e", null ],
-    [ "Lift_state_to_array", "test__lift_8c.html#ad4d79cf55acca86d8466991129c46b25", null ],
-    [ "LiftState_equals_verbose", "test__lift_8c.html#ac66fa0625d18b5e5394c66e59236888c", null ],
-    [ "RunAllLiftTestCases", "test__lift_8c.html#a459b49577d5a84e96af85b00aec46184", null ],
-    [ "RunLiftTestCase", "test__lift_8c.html#a1d3ea621746702bf8dd2fc554c77b923", null ],
+    [ "LiftState_compare", "test__lift_8c.html#abb13d17b7007976b8bd49a0d24e47902", null ],
+    [ "LiftStateArray_convert", "test__lift_8c.html#af3cb4d7ae8688718cb61bb567f9ec3cf", null ],
+    [ "LiftTestAll_run", "test__lift_8c.html#ac665ab8e0849b9ba8af732d93427afff", null ],
+    [ "LiftTestCase_run", "test__lift_8c.html#a024b0010b43ecaae2fc3f84e4780ab76", null ],
     [ "test_case_all_calls", "test__lift_8c.html#a793b2dae5563a1988edbcf6c1d9763f7", null ],
     [ "test_case_already_open", "test__lift_8c.html#a5a0f41fd676d3fbe40b4a8c9d2ff3cac", null ],
     [ "test_case_bottom_to_top", "test__lift_8c.html#a6876323e38ae859ee2c8be47a23963a8", null ],

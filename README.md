@@ -122,8 +122,8 @@ All 13 test cases **pass successfully** with full step-by-step debug logs.
 
 ## Version & Metadata
 
-- Version: `v0.1.0`
-- Git hash: `ba69560`
+- Version: `v1.0.0`
+- Git hash: `0e41fd819e6c0906f174579cd6171997e155e6b7`
 - Git info is injected at build time via macro
 
 ---
