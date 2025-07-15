@@ -12,7 +12,7 @@ extern "C" {
 /**
  * @brief Runs a simple test for the LIFT_ASSERT macro.
  */
-void Test_lift_assert(void);
+void LiftAssert_test(void);
 
 #ifdef __cplusplus
 }

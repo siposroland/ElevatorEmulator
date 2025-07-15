@@ -14,16 +14,16 @@ typedef struct {
     uint8_t index;
     bool invert;
     bool expected;
-} CondSel_TestCase;
+} CondSelTestCase_t;
 
 /**
  * @brief Runs all defined test cases for the condition selector.
  */
-void Test_condsel_all_cases(void)
+void CondSelAllCases_test(void)
 {
     printf("[TEST] Running CondSel_calc() test cases...\n");
 
-    CondSel_TestCase tests[] = {
+    CondSelTestCase_t tests[] = {
         {
             .name = "Pending below only, index=1",
             .inputs = { true, false, false, false, false },
@@ -101,7 +101,7 @@ void Test_condsel_all_cases(void)
 
     for (size_t i = 0; i < num_tests; ++i) 
     {
-        CondSel_TestCase t = tests[i];
+        CondSelTestCase_t t = tests[i];
         bool result = CondSel_calc(t.invert, t.index, t.inputs);
         printf("  - %-40s ... ", t.name);
         if (result == t.expected) 

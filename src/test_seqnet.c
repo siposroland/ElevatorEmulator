@@ -21,16 +21,16 @@ typedef struct {
     uint8_t initial_pc;
     uint8_t expected_pc;
     SeqNet_Out expected;
-} SeqNet_TestCase;
+} SeqNetTestCase_t;
 
 /**
  * @brief Runs all SeqNet test cases, starting from simple to complex instructions.
  */
-void Test_seqnet_all_cases(void)
+void SeqNetAllCases_test(void)
 {
     printf("[TEST] Running SeqNet_loop() test cases...\n");
 
-    SeqNet_TestCase tests[] = {
+    SeqNetTestCase_t tests[] = {
         // 1. Move up only
         {
             .name = "Move up only",
@@ -140,17 +140,17 @@ void Test_seqnet_all_cases(void)
 
     for (size_t i = 0; i < num_tests; ++i) 
     {
-        const SeqNet_TestCase* t = &tests[i];
+        const SeqNetTestCase_t* t = &tests[i];
 
         // Initialize PC and memory
-        SeqNet_set_pc(t->initial_pc);
-        uint16_t* mem = SeqNet_get_program_memory();
+        SeqNetPC_set(t->initial_pc);
+        uint16_t* mem = SeqNetProgramMemory_get();
         memset(mem, 0, 256 * sizeof(uint16_t));
         mem[t->initial_pc] = t->instr;
 
         // Execute one instruction
         SeqNet_Out out = SeqNet_loop(t->condition_active);
-        uint8_t new_pc = SeqNet_get_pc();
+        uint8_t new_pc = SeqNetPC_get();
 
         // Check result
         bool ok = (new_pc == t->expected_pc) &&

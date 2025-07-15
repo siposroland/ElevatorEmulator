@@ -17,7 +17,7 @@ extern "C" {
  * 
  * Prints test results to standard output. Uses assertions to fail fast if any case fails.
  */
-void Test_seqnet_all_cases(void);
+void SeqNetAllCases_test(void);
 
 #ifdef __cplusplus
 }

@@ -13,7 +13,7 @@ extern "C" {
 const char* Version_get(void);
 
 /** @brief Returns the Git commit hash used at build time. */
-const char* Version_git_hash(void);
+const char* VersionGitHash_get(void);
 
 #ifdef __cplusplus
 }

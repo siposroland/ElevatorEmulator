@@ -38,8 +38,9 @@ typedef struct
     uint8_t PC_preset;
 } LiftTestCase_t;
 
+
 /**
- * @brief Converts a high-level lift state into condition selector input format.
+ * @brief Convert LiftState_t to CondSel_In structure.
  *
  * This function takes the current elevator state (floor, door, calls)
  * and fills a CondSel_In structure used for evaluating logic conditions.
@@ -47,7 +48,7 @@ typedef struct
  * @param[in]  state  Pointer to the current lift state.
  * @param[out] out    Pointer to the output CondSel_In structure to be filled.
  */
-void Lift_state_to_array (const LiftState_t* state, CondSel_In* out);
+void LiftStateArray_convert(const LiftState_t* state, CondSel_In* out);
 
 /**
  * @brief Compares two LiftState_t structures and prints differences if any.
@@ -56,14 +57,14 @@ void Lift_state_to_array (const LiftState_t* state, CondSel_In* out);
  * @param[in] b Pointer to the second structure.
  * @return true if all fields match, false otherwise.
  */
-bool LiftState_equals_verbose(const LiftState_t* a, const LiftState_t* b);
+bool LiftState_compare(const LiftState_t* a, const LiftState_t* b);
 
 /**
  * @brief Simulates a lift test case defined by input-output steps.
  *
  * @param case Pointer to array of LiftTestCase_t
  */
-void RunLiftTestCase(const LiftTestCase_t* test, const char* name);
+void LiftTestCase_run(const LiftTestCase_t* test, const char* name);
 
 // Extern declarations for test cases
 extern const LiftTestCase_t test_case_open_door_same_floor;
@@ -86,7 +87,7 @@ extern const LiftTestCase_t test_case_down_two_floors;
 /**
  * @brief Run all tests in one call
  */
-void RunAllLiftTestCases(void);
+void LiftTestAll_run(void);
 
 #ifdef __cplusplus
 }

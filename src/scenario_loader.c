@@ -64,27 +64,27 @@ static const SeqNet_Out default_program[] = {
 /**
  * @brief Loads the default instruction set into program memory.
  */
-void Scenario_load_default_program(void)
+void ScenarioDefaultProgram_load(void)
 {
-    uint16_t* ProgMem = SeqNet_get_program_memory();
+    uint16_t* ProgMem = SeqNetProgramMemory_get();
     for (uint8_t i = 0; i < sizeof(default_program)/sizeof(default_program[0]); ++i)
     {
-        ProgMem[i] = SeqNet_convert_out(&default_program[i]);
+        ProgMem[i] = SeqNetOut_convert(&default_program[i]);
     }
 }
 
 /**
  * @brief Prints the program memory content in human-readable format.
  */
-void Scenario_print_program(void)
+void ScenarioProgram_print(void)
 {
-    uint16_t* ProgMem = SeqNet_get_program_memory();
+    uint16_t* ProgMem = SeqNetProgramMemory_get();
     printf("=== Program Memory Dump ===\n");
     printf(" PC | Jmp | MU | MD | DR | R | CSEL | CIN | Hex \n");
     printf("----+-----+----+----+----+---+------+-----+------\n");
     for (uint8_t i = 0; i < sizeof(default_program)/sizeof(default_program[0]); ++i)
     {
-        SeqNet_Out instr = SeqNet_convert_instruction(ProgMem[i]);
+        SeqNet_Out instr = SeqNetInstruction_convert(ProgMem[i]);
         printf("%3u | %3u | %2u | %2u | %2s | %u |  %2u  |  %u  | 0x%04X\n",
                i,
                instr.jump_addr,

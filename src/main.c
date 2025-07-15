@@ -23,21 +23,20 @@
  */
 int main(void)
 {
-
     // Print version and git hash
     printf("Hello, Elevator Emulator!\n");
     printf("Version: %s\n", Version_get());
-    printf("Git hash: %s\n", Version_git_hash());
+    printf("Git hash: %s\n", VersionGitHash_get());
 
-    // Test_lift_assert();  // Run simple assertion test
+    // LiftAssert_test();  // Run simple assertion test
 
-    Test_condsel_all_cases();  // Run all condition selector tests
-    Test_seqnet_all_cases();   // Run SeqNet tests
+    CondSelAllCases_test();  // Run all condition selector tests
+    SeqNetAllCases_test();   // Run SeqNet tests
 
-    Scenario_load_default_program();  // Load default program into SeqNet
-    Scenario_print_program();  // Print the default program memory
+    ScenarioDefaultProgram_load();  // Load default program into SeqNet
+    ScenarioProgram_print();  // Print the default program memory
 
-    RunAllLiftTestCases();  // Run all lift test cases
+    LiftTestAll_run();  // Run all lift test cases
     
     return 0;
 }

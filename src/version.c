@@ -18,7 +18,7 @@ const char* Version_get(void)
     return PROJECT_VERSION;
 }
 
-const char* Version_git_hash(void)
+const char* VersionGitHash_get(void)
 {
     return GIT_COMMIT_HASH;
 }

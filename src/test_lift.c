@@ -1,4 +1,3 @@
-
 #include "scenario_loader.h"
 #include "seqnet.h"
 #include "condsel.h"
@@ -16,7 +15,7 @@
  *
  * @param case Pointer to array of LiftTestCase_t
  */
-void RunLiftTestCase(const LiftTestCase_t* test, const char* name)
+void LiftTestCase_run(const LiftTestCase_t* test, const char* name)
 {
     CondSel_In cond_in;
     SeqNet_Out seq_out;
@@ -24,7 +23,6 @@ void RunLiftTestCase(const LiftTestCase_t* test, const char* name)
 
     uint16_t instr = 0;
     uint16_t pc_pre = 0;
-    uint16_t pc_post = 0;
 
     bool cond_result = false;
 
@@ -42,7 +40,7 @@ void RunLiftTestCase(const LiftTestCase_t* test, const char* name)
     SeqNet_init();
 
     // Optionally set the Program Counter to a preset value
-    SeqNet_set_pc(test->PC_preset);
+    SeqNetPC_set(test->PC_preset);
 
     // Load the initial state from the test case
     memcpy(&actual, &(test->initial_state), sizeof(LiftState_t));
@@ -62,16 +60,16 @@ void RunLiftTestCase(const LiftTestCase_t* test, const char* name)
     for (uint8_t step = 0; step < test->steps; ++step)
     {
         // Get actual index of ProgMem
-        pc_pre = SeqNet_get_pc();
+        pc_pre = SeqNetPC_get();
 
         // Fetch the instruction from ProgMem
-        instr = SeqNet_get_program_memory()[pc_pre];
+        instr = SeqNetProgramMemory_get()[pc_pre];
 
         // Convert 16-bit array to instruction
-        SeqNet_Out output = SeqNet_convert_instruction(instr);
+        SeqNet_Out output = SeqNetInstruction_convert(instr);
 
         // Convert initial lift state to condition selector input format
-        Lift_state_to_array(&actual, &cond_in);
+        LiftStateArray_convert(&actual, &cond_in);
 
         // Calculate the condition selector input
         cond_result = CondSel_calc(output.cond_inv, output.cond_sel, cond_in);
@@ -79,9 +77,6 @@ void RunLiftTestCase(const LiftTestCase_t* test, const char* name)
 
         // Process the sequence network loop
         seq_out = SeqNet_loop(cond_result);
-
-        // Get NEW index of ProgMem
-        pc_post = SeqNet_get_pc();
 
 #if LIFT_TEST_DEBUG_LOG_ENABLED
         // Print the results for debugging
@@ -92,7 +87,7 @@ void RunLiftTestCase(const LiftTestCase_t* test, const char* name)
                 actual.is_door_open ? "Y" : "N",
                 actual.is_moving ? "Y" : "N",
                 pc_pre,
-                pc_post,
+                SeqNetPC_get(), // Get NEW index of ProgMem
                 seq_out.req_reset ? 1 : 0,
                 actual.calls[0], actual.calls[1], actual.calls[2],
                 actual.calls[3], actual.calls[4], actual.calls[5],
@@ -163,7 +158,7 @@ void RunLiftTestCase(const LiftTestCase_t* test, const char* name)
     );
 
     // Print final state
-    bool result = LiftState_equals_verbose(&actual, &(test->end_state));
+    bool result = LiftState_compare(&actual, &(test->end_state));
     if (result)
     {
         printf("Test case PASSED!\n");
@@ -185,7 +180,7 @@ void RunLiftTestCase(const LiftTestCase_t* test, const char* name)
  * @param[in]  state  Pointer to the current lift state.
  * @param[out] out    Pointer to the output CondSel_In structure to be filled.
  */
-void Lift_state_to_array (const LiftState_t* state, CondSel_In* out)
+void LiftStateArray_convert(const LiftState_t* state, CondSel_In* out)
 {
     // Door state
     out->door_closed = !state->is_door_open;
@@ -199,7 +194,7 @@ void Lift_state_to_array (const LiftState_t* state, CondSel_In* out)
     out->call_pending_same  = false;
     out->call_pending_above = false;
 
-    for (int i = 0; i < LIFT_TEST_MAX_FLOORS; ++i)
+    for (uint8_t i = 0; i < LIFT_TEST_MAX_FLOORS; ++i)
     {
         if (!state->calls[i]) continue;
         if (i < state->floor)
@@ -218,7 +213,7 @@ void Lift_state_to_array (const LiftState_t* state, CondSel_In* out)
  * @param[in] b Pointer to the second structure.
  * @return true if all fields match, false otherwise.
  */
-bool LiftState_equals_verbose(const LiftState_t* a, const LiftState_t* b)
+bool LiftState_compare(const LiftState_t* a, const LiftState_t* b)
 {
     bool match = true;
 
@@ -244,7 +239,7 @@ bool LiftState_equals_verbose(const LiftState_t* a, const LiftState_t* b)
         match = false;
     }
 
-    for (int i = 0; i < LIFT_TEST_MAX_FLOORS; ++i)
+    for (uint8_t i = 0; i < LIFT_TEST_MAX_FLOORS; ++i)
     {
         if (a->calls[i] != b->calls[i])
         {
@@ -344,18 +339,18 @@ const LiftTestCase_t test_case_down_two_floors = {
     .steps = 18
 };
 
-void RunAllLiftTestCases(void)
+void LiftTestAll_run(void)
 {
-    RunLiftTestCase(&test_case_already_open,           "already_open");
-    RunLiftTestCase(&test_case_open_door_same_floor,   "open_door_same_floor");
-    RunLiftTestCase(&test_case_move_down,              "move_down");
-    RunLiftTestCase(&test_case_move_up,                "move_up");
-    RunLiftTestCase(&test_case_multiple_calls,         "multiple_calls");
-    RunLiftTestCase(&test_case_idle,                   "idle");
-    RunLiftTestCase(&test_case_reopen_during_close,    "reopen_during_close");
-    RunLiftTestCase(&test_case_bottom_to_top,          "bottom_to_top");
-    RunLiftTestCase(&test_case_middle_stop,            "middle_stop");
-    RunLiftTestCase(&test_case_up_two_floors,          "up_two_floors");
-    RunLiftTestCase(&test_case_down_two_floors,        "down_two_floors");
-    RunLiftTestCase(&test_case_all_calls,              "all_calls");
+    LiftTestCase_run(&test_case_already_open,           "already_open");
+    LiftTestCase_run(&test_case_open_door_same_floor,   "open_door_same_floor");
+    LiftTestCase_run(&test_case_move_down,              "move_down");
+    LiftTestCase_run(&test_case_move_up,                "move_up");
+    LiftTestCase_run(&test_case_multiple_calls,         "multiple_calls");
+    LiftTestCase_run(&test_case_idle,                   "idle");
+    LiftTestCase_run(&test_case_reopen_during_close,    "reopen_during_close");
+    LiftTestCase_run(&test_case_bottom_to_top,          "bottom_to_top");
+    LiftTestCase_run(&test_case_middle_stop,            "middle_stop");
+    LiftTestCase_run(&test_case_up_two_floors,          "up_two_floors");
+    LiftTestCase_run(&test_case_down_two_floors,        "down_two_floors");
+    LiftTestCase_run(&test_case_all_calls,              "all_calls");
 }

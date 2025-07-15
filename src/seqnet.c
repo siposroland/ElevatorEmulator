@@ -36,7 +36,7 @@ uint8_t SeqNet_PC = 0;
  *
  * @return Pointer to the 256-element instruction memory.
  */
-uint16_t* SeqNet_get_program_memory(void)
+uint16_t* SeqNetProgramMemory_get(void)
 {
     return SeqNet_ProgMem;
 }
@@ -48,7 +48,7 @@ uint16_t* SeqNet_get_program_memory(void)
  *
  * @return Current value of PC (0–255).
  */
-uint8_t SeqNet_get_pc(void)
+uint8_t SeqNetPC_get(void)
 {
     DEBUG_PC_PRINTF("DEBUG: PC get: 0x%02X\n", SeqNet_PC);
     return SeqNet_PC;
@@ -61,7 +61,7 @@ uint8_t SeqNet_get_pc(void)
  *
  * @param value New Program Counter value (must be < 256).
  */
-void SeqNet_set_pc(uint8_t value)
+void SeqNetPC_set(uint8_t value)
 {
     LIFT_ASSERT(value < PROGMEM_SIZE);
     SeqNet_PC = value;
@@ -97,7 +97,7 @@ SeqNet_Out SeqNet_loop(const bool condition_active)
     uint16_t instr = SeqNet_ProgMem[SeqNet_PC];
 
     // Decode instruction into output structure
-    SeqNet_Out out = SeqNet_convert_instruction(instr);
+    SeqNet_Out out = SeqNetInstruction_convert(instr);
 
     // Update PC based on condition
     if (condition_active) 
@@ -121,7 +121,7 @@ SeqNet_Out SeqNet_loop(const bool condition_active)
  * @param instr 16-bit instruction
  * @return Converted instruction structure
  */
-SeqNet_Out SeqNet_convert_instruction(uint16_t instruction)
+SeqNet_Out SeqNetInstruction_convert(uint16_t instruction)
 {
     SeqNet_Out out = 
     {
@@ -143,7 +143,7 @@ SeqNet_Out SeqNet_convert_instruction(uint16_t instruction)
  * @param[in] out Pointer to the structure to encode.
  * @return Converted 16-bit instruction.
  */
-uint16_t SeqNet_convert_out(const SeqNet_Out* out)
+uint16_t SeqNetOut_convert(const SeqNet_Out* out)
 {
     LIFT_ASSERT(out != NULL);
 

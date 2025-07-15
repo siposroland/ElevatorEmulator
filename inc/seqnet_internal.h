@@ -17,7 +17,7 @@ extern "C" {
 /**
  * @brief Bit positions for decoding a 16-bit instruction.
  */
-typedef enum InstructionBitPositions {
+typedef enum InstructionBitPositions_t {
     BIT_MOVE_UP       = 8,   ///< Request to move the elevator upward
     BIT_MOVE_DOWN     = 9,   ///< Request to move the elevator downward
     BIT_DOOR_STATE    = 10,  ///< Target door state (1 = open, 0 = close)
@@ -30,7 +30,7 @@ typedef enum InstructionBitPositions {
 /**
  * @brief Bit masks for extracting instruction fields.
  */
-typedef enum InstructionBitMasks {
+typedef enum InstructionBitMasks_t {
     MASK_COND_SEL     = 0x7,     ///< 2-bit mask for condition selector
     MASK_JUMP_ADDR    = 0xFF     ///< 8-bit mask for jump address
 } InstructionBitMasks_t;
@@ -38,7 +38,7 @@ typedef enum InstructionBitMasks {
 /**
  * @brief Boolean flags for door request
  */
-typedef enum DoorRequest {
+typedef enum DoorRequest_t {
     DOOR_REQ_CLOSE   = 0,        ///< Need to close the door
     DOOR_REQ_OPEN    = 1         ///< Need to open the door
 } DoorRequest_t;
@@ -47,19 +47,19 @@ typedef enum DoorRequest {
  * @brief Returns a pointer to the internal program memory array.
  * @return Pointer to ProgMem (256-element array of uint16_t).
  */
-uint16_t* SeqNet_get_program_memory(void);
+uint16_t* SeqNetProgramMemory_get(void);
 
 /**
  * @brief Returns the current Program Counter value.
  * @return Current PC value (0–255).
  */
-uint8_t SeqNet_get_pc(void);
+uint8_t SeqNetPC_get(void);
 
 /**
  * @brief Sets the Program Counter to a specific value.
  * @param value New PC value (0–255).
  */
-void SeqNet_set_pc(uint8_t value);
+void SeqNetPC_set(uint8_t value);
 
 /**
  * @brief Convert a 16-bit instruction to SeqNet_Out structure.
@@ -67,7 +67,7 @@ void SeqNet_set_pc(uint8_t value);
  * @param instr 16-bit instruction
  * @return Converted instruction structure
  */
-SeqNet_Out SeqNet_convert_instruction(uint16_t instruction);
+SeqNet_Out SeqNetInstruction_convert(uint16_t instruction);
 
 /**
  * @brief Convert a SeqNet_Out structure into a 16-bit instruction.
@@ -75,7 +75,7 @@ SeqNet_Out SeqNet_convert_instruction(uint16_t instruction);
  * @param[in] out Pointer to the structure to encode.
  * @return Converted 16-bit instruction.
  */
-uint16_t SeqNet_convert_out(const SeqNet_Out* out);
+uint16_t SeqNetOut_convert(const SeqNet_Out* out);
 
 #ifdef __cplusplus
 }

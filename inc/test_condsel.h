@@ -12,7 +12,7 @@ extern "C" {
 /**
  * @brief Runs all defined test cases for the condition selector module.
  */
-void Test_condsel_all_cases(void);
+void CondSelAllCases_test(void);
 
 #ifdef __cplusplus
 }
