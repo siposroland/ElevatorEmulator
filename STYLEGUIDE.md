@@ -1,4 +1,4 @@
-# Elevator Emulator – Coding Style Guide
+# Minimal Coding Style Guide
 
 This style guide defines the formatting, naming, and documentation conventions used throughout the Elevator Emulator codebase. It is based on the style used in `seqnet.h` and `condsel.h`.
 
@@ -35,3 +35,5 @@ This style guide defines the formatting, naming, and documentation conventions u
 #ifdef __cplusplus
 extern "C" {
 #endif
+```
+---

@@ -29,6 +29,9 @@ You can regenerate the documentation with the following command
 doxygen .\Doxyfile
 ```
 
+Default style guide: 
+[Style Guide](https://github.com/siposroland/ElevatorEmulator/blob/main/STYLEGUIDE.md)
+
 ## Firmware state machine
 ![StateMachine](state_machine.png)
 ---
